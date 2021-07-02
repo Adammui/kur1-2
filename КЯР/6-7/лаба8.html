@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <style type="text/css">
+    body{
+	     background-image: url(fon.jpg);
+		 background-size: 100%;
+		 background-attachment:fixed;
+	</style>
+<script type="text/javascript"src="C:\Users\Reyn\Desktop\jquery.js">
+
+        function z1_1()
+            {
+                var a = document.getElementById('z1');
+                a.style.color = "red";
+            }
+        function z1_2()
+            {
+                var a = document.getElementById('z1');
+                a.style.color = "black";
+            }
+        function z2()
+            {
+                var a = document.getElementById('z2')
+                a.style.fontSize = "xx-large";
+            }
+            var pics = new Array('z3_1.jpg', 'z3_2.jpg', 'z3_3.jpg', 'z3_4.jpg', 'z3_5.jpg');
+            var n = 1;
+        function z3()
+            {
+                var z3 = event.srcElement.id;
+                var picture = document.getElementById(z3);
+                picture.src=pics[n];
+                n++;
+                if (n == pics.length)
+                    n = 0;
+            }
+        function z4()
+            {
+                var a = event.srcElement.id;
+                var picture = document.getElementById(a);
+                picture.innerHTML=('<img width="500" heigt="300" src="z4.jpg"/>');
+            }
+        function z6_1()
+            {
+                var a = document.getElementById('z6');
+                a.style.border = '10px red solid';
+            }
+        function z6_2()
+            {
+                var a = document.getElementById('z6');
+                a.style.border = '0px ';
+            }
+        function z5_1()
+            {
+                var z5 = event.srcElement.id;
+                var picture = document.getElementById(z5);
+                picture.width = '1000';
+                picture.height = '600';
+            }
+        function z5_2()
+            {
+                var z5 = event.srcElement.id;
+                var picture = document.getElementById(z5);
+                picture.width = '500';
+                picture.height = '300';
+            }
+       
+        </script>
+</head>
+<body>
+<h1>Лабораторная 8 будет про GREAT BRITAIN</h1>
+Наведите на слово <span id="z1" onmouseout="z1_2()" onmouseover="z1_1()">England </span>. (Изменяет цвет слова в тексте при наведении курсора мыши)
+
+<p id="z2" onclick="z2()"> Every royal house or ‘dynasty’ has a surname. In Britain’s case that name is Windsor Queen Elizabeth II is the fourth Windsor monarch. She is also the head of a very large family. She has three sons, one daughter, and many grandsons and granddaughters. </p>(Щелчком мыши изменяет размер шрифта)
+
+<p id="z4" onclick="z4()">The most famous British royal home is Buckingham Palace. But it is not the only one. The Queen and her family have several other castles, official residences and country houses too. Today Buckingham Palace is the best known palace in the world. It stands at the end of a long boulevard called The Mall and it has 600 rooms on three floors, 400 staff, and 300 clocks.</p> (Заменяет при щелчке текст изображением Buckingham Palace)
+
+<p id="z6" ondblclick="z6_1()" onclick="z6_2()">After Queen Elizabeth II, Britain’s next monarch will probably be Prince Charles, the Prince of Wales. He will be King Charles III. Even further in the future his son, Prince William, will become king too. His title will be King William V. The National Anthem is called ‘God save the Queen’. But if Prince Charles becomes King, it will be ‘God save the King’.</p> (При двойном щелчке рисует вокруг абзаца рамку)
+
+<h1>Красивые места в Англии</h1>
+<img id="z3" onclick="z3()" src="z3_1.jpg" width="500" height="300" />
+(Щелчок чтобы листать)
+
+<br>
+<img id="z5" onmouseover="z5_1()" onmouseout="z5_2()" src="z5.jpg" width="500" height="300" />
+
+<br>
+After Queen Elizabeth II, Britain’s next monarch will probably be Prince Charles, the Prince of Wales. He will be King Charles III. Even further in the future his son, Prince William, will become king too. His title will be King William V. The National Anthem is called ‘God save the Queen’. But if Prince Charles becomes King, it will be ‘God save the King’.
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grafs</title>
+<script src="C:\Users\Reyn\Desktop\jquery.js" > </script>
+<style>
+	div
+    {position:absolute}
+</style>
+</head>
+
+<body>
+	<form id="rad"name='data'>
+	График функции:  
+	<input id='z'type='radio' name='s' value='1' /> y=x^2
+	<input id='z2'type='radio' name='s' value='2' /> y=x^3  
+	<input id='z3'type='radio' name='s' value='3' /> y=sin(x) 
+	<input id='z4'type='radio' name='s' value='4' /> y=cos(x)
+	<br>
+
+	Цвет графика: 
+	<select id="sell"name='dr'>
+		<option value='"black"' selected> black 
+		<option value='"blue"'> blue 
+		<option value='"red"'> red 
+	</select> 
+	</form>
+<input type='button' value='Нарисовать' form='data' onClick='graf()'>
+<canvas id="canvas" width="750" height="400"></canvas>
+    <script type="text/javascript">
+$("#z").click(function () {m=1});
+$("#z2").click(function () {m=2});
+$("#z3").click(function () {m=3});
+$("#z4").click(function () {m=4});
+    function graf()
+    {
+let c = document.querySelector('canvas');
+var ctx = c.getContext("2d");
+ctx.clearRect(0, 0, 900, 900);
+
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 4;
+  ctx.beginPath()
+  ctx.moveTo(c.width / 2, 0)
+  ctx.lineTo(c.width / 2, c.height)
+  ctx.stroke()
+
+  ctx.beginPath()
+  ctx.moveTo(0, c.height / 2)
+  ctx.lineTo(c.width, c.height / 2)
+  ctx.stroke()
+
+  ctx.strokeStyle = $("#sell option:selected").text();
+  ctx.beginPath();
+  cx = 0;
+  cy = c.height / 2;
+  ctx.moveTo(cx, cy);
+
+ if(m==3)
+    { for (i = -100; i<300; i++) {
+    x = i*3; 
+    y=40*Math.sin(10*i/180*Math.PI);
+    ctx.lineTo(cx+x, cy+y);}
+}
+ if(m==4) 
+    { for (i = -100; i<300; i++) {
+    x = i*3;  
+    y=40*Math.cos(10*i/180*Math.PI);
+    ctx.lineTo(cx+x, cy+y);}
+}
+
+  cx = c.width / 2 ;
+  cy = c.height / 2;
+  ctx.moveTo(cx, cy);
+  if(m==2)
+    { for (i = -500; i<500; i++) {
+    x = i*3; 
+    y=0.001*Math.pow(x,3);
+    ctx.lineTo(cx+x, cy+y);}
+}
+
+    if(m==1)
+    { for (i = -1000; i<500; i++) {
+    x = i*3; 
+    y=-0.14*Math.pow(x,2);
+    ctx.lineTo(cx+x, cy+y);}
+}
+
+  ctx.lineWidth = 4;
+  ctx.stroke()
+  ctx.strokeStyle = "black";
+  ctx.beginPath()
+  ctx.moveTo(c.width / 2, 0)
+  ctx.lineTo(c.width / 2, c.height)
+  ctx.stroke()
+    }
+    </script>
+    </body>
+</html> 

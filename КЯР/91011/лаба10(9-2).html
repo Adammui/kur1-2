@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Движение картинок</title>
+<script src="C:\Users\Reyn\Desktop\jquery.js" > </script>
+<style type="text/css">
+	#myimg{position:absolute; }
+#myimg2{position:absolute; top:300px; }</style>
+</head> 
+
+<body > 
+<div id="1"><img id="myimg" src="1.gif" width="250 px" height="250px" ></div>
+<div id="2"><img id="myimg2" src="1.gif" width="250 px" height="250px"></div>
+     
+<script type="text/javascript"> 
+
+$( "#myimg" ).click(function() {
+  $('#myimg').animate(
+  	{left: "+=1440"},1500);
+});
+
+$( "#myimg2" ).click(function() {
+	$( "#myimg2" ).animate(
+    {left: "+=1440"},{duration: 4000, step: function( st )
+    	{
+        	$(this).css({top:Math.sin(st/50)*50+300})
+      	}
+    });
+    $( "#myimg2" ).animate(
+    {left: "-=1440"},{duration: 4000, step: function( st )
+    	{
+        	$(this).css({top:Math.sin(st/50)*50+300})
+      	}
+    });
+    
+});
+	
+
+
+</script> 
+
+</body>
+</html> 

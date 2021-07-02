@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <style type="text/css">
+    body {
+	     background-image: url(fon.jpg);
+		 background-size: 100%;
+		 background-attachment:fixed;
+        };
+	</style>
+<script src="C:\Users\Reyn\Desktop\jquery.js" > </script>
+</head>
+<body>
+<h1>Лабораторная 8 будет про GREAT BRITAIN</h1>
+Наведите на слово <span class="z1">England </span>
+<p class="z2"> Every royal house or ‘dynasty’ has a surname. In Britain’s case that name is Windsor Queen Elizabeth II is the fourth Windsor monarch. She is also the head of a very large family. She has three sons, one daughter, and many grandsons and granddaughters. </p>(Щелчком мыши изменяет размер шрифта)
+
+<p class="z4">The most famous British royal home is Buckingham Palace. But it is not the only one. The Queen and her family have several other castles, official residences and country houses too. Today Buckingham Palace is the best known palace in the world. It stands at the end of a long boulevard called The Mall and it has 600 rooms on three floors, 400 staff, and 300 clocks.</p> (Заменяет при щелчке текст изображением Buckingham Palace)
+
+<p class="z6" >After Queen Elizabeth II, Britain’s next monarch will probably be Prince Charles, the Prince of Wales. He will be King Charles III. Even further in the future his son, Prince William, will become king too. His title will be King William V. The National Anthem is called ‘God save the Queen’. But if Prince Charles becomes King, it will be ‘God save the King’.</p> (При двойном щелчке рисует вокруг абзаца рамку)
+
+<h1>Красивые места в Англии</h1>
+<img class="z3" src="z3_1.jpg" width="500" height="300" />
+(Щелчок чтобы листать)
+
+<br>
+<img class="z5" src="z5.jpg" width="500" height="300" />
+
+<br>
+After Queen Elizabeth II, Britain’s next monarch will probably be Prince Charles, the Prince of Wales. He will be King Charles III. Even further in the future his son, Prince William, will become king too. His title will be King William V. The National Anthem is called ‘God save the Queen’. But if Prince Charles becomes King, it will be ‘God save the King’.After Queen Elizabeth II, Britain’s next monarch will probably be Prince Charles, the Prince of Wales. He will be King Charles III. Even further in the future his son, Prince William, will become king too. His title will be King William V. The National Anthem is called ‘God save the Queen’. But if Prince Charles becomes King, it will be ‘God save the King’After Queen Elizabeth II, Britain’s next 
+<div class="z4"><img width="500" heigt="300" src="z4.jpg"/></div>
+
+<script type="text/javascript"> 
+    $(function()
+    {
+        $( ".z1" )
+            .mouseover(function(){
+            $( ".z1").css({"color":"red"});
+        })
+            .mouseout(function() {
+            $(".z1").css({"color":"black"});
+        });   
+//
+        var m=1;
+        $( ".z2" )
+            .click(function() {
+            if(m%2==1)
+                $( ".z2" ).css({"fontSize":"xx-large"});
+            else
+                $( ".z2" ).css({"fontSize":"medium"});
+            m++;
+        }); 
+//
+        var pics = new Array('z3_1.jpg', 'z3_2.jpg', 'z3_3.jpg', 'z3_4.jpg', 'z3_5.jpg');
+        var n= 1;
+
+        $( ".z3" )
+            .click(function() {
+           $(".z3").attr("src",pics[n]);
+            n++;
+            if (n == pics.length)
+                n = 0;
+        }); 
+//
+
+        $( ".z4" ).click(function() {
+           $( this ).replaceWith( $( "div.z4" ) );
+        }); 
+//
+        $( ".z6" )
+            .dblclick(function() {
+            $( ".z6" ).css({"border":"10px red solid"});
+        })
+            .click(function() {
+            $( ".z6" ).css({"border":"0px"})
+        });
+//
+        $( ".z5" )
+            .mouseover(function() {
+            $( this ).height("600px").width("1000px");
+            })
+            .mouseout(function(){
+            $( this ).height("300px").width("500px");
+            }); 
+    });
+</script>
+</body>
+</html>

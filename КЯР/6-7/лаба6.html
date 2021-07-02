@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лаба6</title>
+   
+    <script type="text/javascript">
+    var a;
+    function function1() {
+          x=prompt('Введите текст:', 'текст');
+        }
+    function function2() {
+      aw= window.open();
+      aw.document.write(x);
+        }
+    function function3() {
+            aw.window.close();
+        }
+
+            document.title="Таблица";
+            document.write("<table border='4'>");
+            document.write('<tr><td>navigator.userAgent</td><td>' + navigator.userAgent + '</td></tr>');
+            document.write('<tr><td>navigator.appVersion</td><td>' + navigator.appVersion + '</td></tr>');
+            document.write('<tr><td>navigator.appName</td><td>' + navigator.appName + '</td></tr>');
+            document.write('<tr><td>navigator.platform</td><td>' + navigator.platform + '</td></tr>');
+            document.write('<tr><td>navigator.appCodeName</td><td>' + navigator.appCodeName + '</td></tr>');
+            document.write('<tr><td>navigator.javaEnabled</td><td>' + navigator.javaEnabled() + '</td></tr>');
+            document.write('<tr><td>screen</td><td>' + screen.width + '*' + screen.height + '</td></tr>');
+            document.write('<tr><td>screen.colorDepth</td><td>' + screen.colorDepth + '</td></tr>');
+            document.write('<tr><td>history.length</td><td>' + history.length + '</td></tr>');
+            document.write('<tr><td>location.href</td><td>' + location.href + '</td></tr>');
+            document.write('<tr><td>location.pathname</td><td>' + location.pathname + '</td></tr>');
+            document.write('<tr><td>location.host</td><td>' + location.host + '</td></tr>');
+            document.write('</table>'+"<br>");
+    </script>
+ 
+   
+</head>
+ 
+<body>
+    <input type="button" value="Новая вкладка" onclick="function2()" />
+    <input type="button" value="Закрыть вкладку" onclick="function3()" />
+    <input type="button" value="Ввести текст" onclick="function1()" />
+    </div>
+   
+</body>
+</html>

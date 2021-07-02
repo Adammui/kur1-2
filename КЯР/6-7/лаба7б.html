@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<form name=data>
+<fieldset>
+<legend>Данные о пользователе: </legend>
+<textarea name="TA" style="height: 70px">
+Факультет Информационных Технологий
+</textarea> <br /> <br /> 
+
+Имя: <br /><input type='text' name='Firstname' /><br /> 
+Фамилия:<br /> <input type='text' name='Lastname' /><br />
+
+<p> Специальность:</p>
+<select name='sele'>
+	<option value='Выберите специальность' selected>Выберите специальность
+	<option value='ПОИТ'> ПОИТ
+	<option value='ИСИТ'> ИСИТ
+	<option value='ПОИБМС'> ПОИБМС
+	<option value='ДЭВИ'> ДЭВИ
+</select> 
+
+<p> Курс:</p> 
+    <input type='radio' name='s' value='1' />  
+    <input type='radio' name='s' value='2' /> 
+    <input type='radio' name='s' value='3' />  
+    <input type='radio' name='s' value='4' /> 
+
+<p> Учебные Предметы: </p> 
+    <input type='checkbox' name='space' value='ОИТ' /> ОИТ
+    <input type='checkbox' name='space' value='ОАП' /> ОАП 
+    <input type='checkbox' name='space' value='Матем' /> Матем 
+    <input type='checkbox' name='space' value='Физика' /> Физика
+    <input type='checkbox' name='space' value='ОСИ' /> ОСИ <br /> <br />
+
+<input type='button' value='Готово' onClick='alert("Анкета заполнена");'>
+<input type='reset' value='Сброс'> <br /> <br />
+
+<input type='button' value='Печать' onClick='prints()'>
+</fieldset> 
+</form> 
+
+<script type="text/javascript">
+        
+    function prints()
+    {
+    var subject = document.getElementsByName("space");
+    var n = subject.length;
+    var arr = new Array;
+    for (var i = 0; i < n; i++)
+        {
+ 	    if (subject[i].checked) arr[i] = subject[i].value;
+ 	    else arr[i] = 0;
+        }
+    var a =window.open();
+
+    a.document.write(document.forms.data.elements.TA.defaultValue +"<br>Cтудент "+ document.forms.data.elements.Firstname.value +" "+ document.forms.data.elements.Lastname.value+ " специальность "+document.forms.data.elements[4].value+" курс "+ document.forms.data.elements.s.value+" должен сдавать следующие предметы: " );
+    for (var i = 0; i < n; i++)
+ 	
+ 	if (arr[i] != 0)	
+ 	a.document.write("<li>" + arr[i] + "</li>");
+
+    a.document.write("<input type='button' align='bottom' value='Закрыть страницу печати' onclick='window.close()'/>");
+
+    a.document.write ("<br/> <form name=2ndform><fieldset><p> Список выбранных:</p><select name='seleсс'>")
+    for (var i = 0; i < n; i++)
+    	if(arr[i]!=0)
+	    a.document.write('<option value="'+arr[i]+'">'+ arr[i])
+ 
+    a.document.write("</select></fieldset></form> ")
+ 	
+    }
+</script>
+
+</body>
+</html>

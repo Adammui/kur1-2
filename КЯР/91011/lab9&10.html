@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> Перетаскивания </title>
+
+<script type="text/javascript"> 
+
+document.onmousedown = function (e) 
+{   
+	var a = e.target; 
+    let shiftX = event.clientX - a.getBoundingClientRect().left;
+    let shiftY = event.clientY - a.getBoundingClientRect().top;           
+    a.style.position = 'absolute';
+    a.style.zIndex = 1000;
+    document.body.append(a);
+    moveAt(event.pageX, event.pageY);
+
+    function moveAt(pageX, pageY) 
+    {
+        a.style.left = pageX - shiftX + 'px';
+        a.style.top = pageY - shiftY + 'px';
+    }
+    function onMouseMove(event) 
+    {
+        moveAt(event.pageX, event.pageY);
+    }
+    document.addEventListener('mousemove', onMouseMove);
+    a.onmouseup = function() 
+    {
+       document.removeEventListener('mousemove', onMouseMove);
+       a.onmouseup = null;
+    }
+
+}
+document.ondragstart = function() 
+{
+  return false;
+}
+
+</script>
+</head> 
+<body id = "mybody"> 
+	<img ID="myimg" src=7.gif ondragstart = "drag()" position:absolute width="200px" height="200px" >
+    <textarea ID="tl" ondblclick="drag()" STYLE = "position:absolute; top:250px; left: 50px"> Текстовая область</textarea>
+
+</body>
+</html> 

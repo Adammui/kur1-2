@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> grafs</title>
+		<style>
+			div{position:absolute}
+		</style>
+	</head>
+
+	<body>
+		<form name='data'>
+		График функции:  
+		<input type='radio' name='s' value='1' /> y=x^2
+		<input type='radio' name='s' value='2' /> y=x^3  
+		<input type='radio' name='s' value='3' /> y=sin(x) 
+		<input type='radio' name='s' value='4' /> y=cos(x)
+		<br>
+
+		Цвет графика: 
+		<select name='dr'>
+			<option value='black' selected> Черный 
+			<option value='blue'> Синий 
+			<option value='red'> Красный 
+		</select> 
+		</form>
+
+		<input type='button' value='Нарисовать' form='data' onClick='graf()'>
+
+	<script type="text/javascript"> 
+    function graf()
+    {
+    	m=document.forms.data.elements.s.value;  
+    	var a=window.open()
+    	a.document.write(" <style>div{position:absolute}</style> ");
+    	a.document.write(" График функции в цвете "+ document.forms.data.elements.dr.value); 
+    	var w=1300;
+    	var h=800;    
+    	var x0=w/2;
+    	var y0=h/2;
+    	var n=1; 
+
+    	for (i=30; i<w; i++)     // координатные оси
+   		 	a.document.write( " <div style='top: " +y0+ " ; left: " +i+ " '><img src = 'point.bmp'width=3 height=3></div> " ); 
+  		for (i=50; i<h; i++) 
+    		a.document.write( " <div style='left: " +x0+ " ; top: " +i+ " '><img src = 'point.bmp'width=3 height=3></div> " ); 
+  		kx= w/35;
+  		ky= h/35; 
+    	a.document.write("<font color="+ document.forms.data.elements.dr.value +" >");  
+
+    	for (x = - 15; x < 15; x = x + 0.01)
+    		{  
+    		if(m==1)  
+    			y=3*Math.pow(x,2);
+    		if(m==2)  
+    			y=3*Math.pow(x,3);
+    		if(m==3)  
+    			y=3*Math.sin(x);
+    		if(m==4)  
+    			y=3*Math.cos(x);
+    		a.document.write("<div style='left:"+(x0+kx*x)+";top:"+(y0-ky*y-12)+" '>.</div>");
+    		}
+
+		a.document.write("<input type='button' value='Закрыть страницу' form='data' onClick='window.close()'> "); 
+    }
+	</script>
+	</body>
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Перетаскивания </title>
+<script src="C:\Users\Reyn\Desktop\jquery.js" > </script>
+<script src="https://jqwidgets.com/public/jqwidgets/jqx-all.js" > </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    //<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> 
+</script>
+
+</head> 
+<body>
+
+<div id="myimg"><img src=7.gif width="250 px" height="250px"></div>
+<div id="myimg2"style="margin-left: 3px; margin-top: 20px"><textarea id="ta"> Текстовая область</textarea> </div>
+<script type="text/javascript"> 
+$(function() {
+    
+    $("#myimg").draggable();
+    $("#myimg2").jqxDragDrop();
+    $("#ta").on("click", function () {
+        $("#ta").jqxTextArea('focus');
+    });
+});
+</script>
+
+</body>
+</html> 

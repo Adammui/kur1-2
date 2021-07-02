@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Движение картинок</title>
+</head> 
+<body id = "mybody"> 
+<img ID="myimg" src="1.gif" onclick="m1()" style=' position:absolute; width:200; height:200; '>
+ <img ID="myimg2" src="1.gif" onclick="m2()" style=' position:absolute; top: 300; width:200; height:200; '>
+     
+<script type="text/javascript"> 
+function m1()
+{
+var curPosX = 0;
+var interval;
+var n = 5; 
+var width = 1700;
+var imgWidth = 200; 
+var myimg = document.getElementById("myimg");
+
+function move() 
+{
+	myimg.style.left = (curPosX += n) + "px";
+	if (curPosX == (width - imgWidth)) 
+	{
+		clearInterval(interval);
+	}
+}
+interval = setInterval(move, 10);
+}
+
+function m2()
+{
+var curPosX2 = 10;
+var curPosY2 = 300;
+var interval2;
+var n2 = 5; 
+var m2 = 1;
+var width2 = 1700;
+var imgWidth2 = 200; 
+var t = 5;
+var myimg2 = document.getElementById("myimg2");
+
+	function move2() 
+	{
+		myimg2.style.left = (curPosX2 += 20*m2) + "px";
+		myimg2.style.top = (curPosY2 += n2*2) + "px";
+		t++;
+		if (t%10==0 && t%20!=0)
+		{
+    		n2=-5;
+		}
+		if (t%10==0 && t%20==0)
+		{
+    		n2=5;
+		}
+		
+		if (curPosX2 >= 1500)
+		{
+			m2=-1;	
+		}
+
+		if (curPosX2 <= 20)
+		{
+			clearInterval(interval2);
+		}
+	}
+
+interval2 = setInterval(move2, 30);
+}
+</script> 
+</body>
+</html> 

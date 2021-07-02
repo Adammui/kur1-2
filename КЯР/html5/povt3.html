@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>povt3</title>
+	<style type="text/css">
+	@keyframes slide 
+	{
+	  	0% {left: 0; top: 0; }
+	  	50% {left: 244px; top: 100px; }
+	  	100% {left: 488px; top: 0;} 
+	}
+	.ball 
+	{
+		background: purple;
+		border-radius: 50%;
+		height: 50px;
+		position: absolute;
+		width: 50px;
+		animation: slide 2s linear infinite;
+	}
+
+	.main 
+	{
+		width: 600px;
+		height: 600px;
+		background:gray;
+	}
+	.box 
+	{
+		position: absolute;
+		background: red;
+		width: 150px;
+		height: 150px;
+		border-radius: 6px
+		transition-property: background, border-radius;
+		transition-duration: 1s;
+		transition-timing-function: linear;
+	}
+
+	.box1 
+	{
+		position: absolute;
+		margin-top:150px;
+		background: orange;
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		border-radius: 6px;
+		transition-duration: 1s;
+		transition-timing-function: linear; 
+	}
+
+	.box2 
+	{
+		position: absolute;
+		margin-top:300px;
+		width: 0;
+		height: 0;
+		border-top: 140px solid yellow;
+		border-left: 70px solid transparent;
+		border-right: 70px solid transparent;
+		transition-duration: 1s;
+		transition-timing-function: linear;
+	}
+
+	.box3 
+	{
+		position: absolute;
+		margin-top:450px;
+		background: white;
+		width: 140px;
+		height: 140px;
+		border-style: dashed;
+		border: 5px dashed red;
+		transition-duration: 1s;
+		transition-timing-function: linear;
+	}
+
+	.main:hover .box
+	{
+		background:white ;
+		width: 30px;
+		height: 30px;
+	}
+	.main:hover .box1
+	{
+		background:yellow ;
+		border-radius: 50%;
+	}
+	.main:hover .box2
+	{
+		border-top: 140px solid orange;
+		margin-left: 400px;
+	}
+	.main:hover .box3
+	{
+		background: red;
+		border-style: dashed;
+		border: 1px dashed white;
+	}
+	</style>
+</head>
+<body>
+	Наведите на серый блок чтобы начать анимацию.<br>
+	(фиолетовый круг анимирован всегда)
+	<div class="main">
+		<div class="box"></div>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</div>
+	<div class="stage">
+		<figure class="ball"></figure>
+	</div>
+</body>
+</html>
