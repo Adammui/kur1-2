@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> IF ELSE </title>
+</head>
+<body>
+<script type='text/javascript'>
+
+let x1=prompt('Введите число 1:', 'число');
+document.write('Вы ввели число ', x1 , '    ');
+
+let x2=prompt('Введите число 2:', 'число');
+document.write('Вы ввели число ', x2 , '    ');
+
+if ( x1<x2)
+document.write("Первое число больше второго");
+
+else 
+{if (x2!=x1)
+document.write("Число 2 больше первого");
+
+else
+document.write("Числа равны");
+ }
+
+( x1<x2) ? document.write(" ЧИСЛО 1 БОЛЬШЕ") : ((x2!=x1) ? document.write(" ЧИСЛО 2 БОЛЬШЕ"): document.write(" РАВНЫ") );
+
+</script>
+
+</body>
+</html>

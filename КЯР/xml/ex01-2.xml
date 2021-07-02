@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='ex01-2.xsl'?>
+<knowledgeDatabase>
+<tutorial>
+<title>"Заметки об XSL"</title>
+<author>Леонов Игорь Васильевич</author>
+</tutorial>
+<tutorial>
+<title>"Введение в CSP"</title>
+<author>Леонов Игорь Васильевич</author>
+</tutorial>
+</knowledgeDatabase>

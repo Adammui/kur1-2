@@ -1,0 +1,232 @@
+<html>
+<head>
+<style type='text/css'>
+ * { 
+    font-family: Arial, Verdana, sans-serif;
+	color: purple;
+	background-color: black;
+    font-size: 105%; 
+	}
+table td {
+	padding: 5px;
+	border: 1px solid purple;
+	background-color: white;
+	text-align: center;
+	}
+
+ </style>
+ <table id= 'table'></table>
+</head>
+<body>
+<h3>Лаба1 Задания: </h3>
+<br>
+<input type='button' value='1 задание' onclick='fun1()' />
+<input type='button' value='2 задание' onclick='fun2()' />
+<input type='button' value='3 задание' onclick='fun3()' />
+<input type='button' value='4 задание' onclick='fun4()' />
+<input type='button' value='5 задание' onclick='fun5()' />
+<input type='button' value='6 задание' onclick='fun6()' />
+<input type='button' value='7 задание' onclick='fun7()' />
+<br>
+<h3>Лаба2 Задания: </h3>
+<br>
+<h3> Таблица умножения a на b </h3>
+<script type='text/javascript'>
+function fun1() {
+
+ alert('Вас приветствует учебный центр');
+
+x= prompt('Введите Ваше имя:', 'Имя');
+document.write('Добро пожаловать на наши курсы, '+ x , ' ,');
+
+у= confirm('Хотите стать Web-дизайнером?');
+if (у==true)
+document.write('учите стили CSS и JavaScript с нами!');
+
+else
+document.write('зря вы так, лучше бы записались к нам!');
+}
+
+function fun2() {
+
+let x = 5;
+let y = 10;
+let c = x + y;
+document.write("10+5 = ", +c, '.  ');
+
+let a = '5';
+let b = '10';
+let d = a + b;
+document.write('строка 5 + строка 10 = ', d, '.  ');
+
+let e = x + b, f = y + a;
+document.write('число 5 + строка 10 = ', e , '.  ' );
+document.write('число 10 + строка 5 = ', f, '.   ');
+alert('Результатом сложения строки и числа всегда будет строка.' );
+}
+
+function fun3() {
+
+let x=5, y=33;
+let z1 =35*y-25*x;
+let z= z1/5+232;
+let k =(8*y/x+5*x/y-43)*6;
+document.write('Первое выражение равно ', z, '.  ');
+document.write('Второе выражение равно ', k , '.  ');
+let m= z%k;
+document.write('Остаток от деления 1 выр на 2 = ' , m); 
+alert('Результаты: ');
+ }
+ 
+function fun4() {
+ 
+x=prompt('Введите число 1:', 'число');
+document.write('Вы ввели число ', x , '    ');
+
+if ( x<20 || x>40 && x!=15 && x%5==0 )
+document.write("Правильно! Оно меньше 20 или больше 40 и не равно 15 и делится без остатка на 5. ");
+
+else
+document.write("Не угадали");
+
+x1=prompt('Введите число 2:', 'число');
+document.write('Вы ввели число ', x1 , '    ');
+
+if ( x1<=0 || x1>-100 && x1%10!=0 )
+document.write("Правильно! Это число отрицательное, больше -100 и не делится на 10 без остатка. ");
+
+else
+document.write("Не угадали");
+ }
+ 
+function fun5() {
+  
+  let x1=prompt('Введите число 1:', 'число');
+document.write('Вы ввели число ', x1 , '    ');
+
+let x2=prompt('Введите число 2:', 'число');
+document.write('Вы ввели число ', x2 , '    ');
+
+if ( x1<x2)
+document.write("Первое число больше второго");
+
+else 
+{if (x2!=x1)
+document.write("Число 2 больше первого");
+
+else
+document.write("Числа равны");
+ }
+
+( x1<x2) ? document.write(" ЧИСЛО 1 БОЛЬШЕ") : ((x2!=x1) ? document.write(" ЧИСЛО 2 БОЛЬШЕ"): document.write(" РАВНЫ") );
+
+  }
+  
+function fun6() {
+   
+let x=prompt('Введите номер дня недели от 1 до 7', 'номер дня недели');
+switch (x)
+{
+case '1': alert("Это Понедельник");
+break;
+case '2': alert("Это Вторник");
+break;
+case '3': alert("Это Среда");
+break;
+case '4': alert("Это Четверг");
+break;
+case '5': alert("Это Пятница");
+break;
+case '6': alert("Это Суббота");
+break;
+case '7': alert("Это Воскресенье");
+break;
+default: alert( "НЕТ ТАКОГО ДНЯ НЕДЕЛИ!" );
+}
+}
+ function fun7() {
+ 
+try {
+  alert('Выполняется код в блоке try');
+  arg; // ошибка, переменная не определена
+  alert('Ошибки в коде нет и он продолжает выполняться до конца'); 
+} 
+
+catch(e) {
+  alert(e);
+}
+alert("Код продолжает выполнение, когда закрывается блок Catch");
+ }
+ 
+ /*
+ table { //Скрипт относительно таблицы
+width:100%; //Ширина таблицы
+border-collapse:collapse; //Убираем двойные линии между ячейками таблицы
+background-color:#ffcc33; //Задает таблице фоновое изображение, если при заданном фоне для всей таблицы, задать фон для ряда или ячейки, тогда этот ряд или ячейка будут иметь фон отличный от всей таблицы
+border-width:3px; //Толщина рамки таблицы в пикселях
+border-style:solid; //Рамка таблицы сплошная
+border-color:#000000; /*Цвет рамки таблицы
+
+td { //Скрипт относительно ячейки таблицы
+border:1px solid black; //Рамка у ячейки таблицы сплошная
+*/
+ //Задание2
+  var A,B;
+  let i,j;
+A= +prompt('Введите число a :', 'число');
+B= +prompt('Введите число b :', 'число');
+document.write('<table border="1">')
+for (i=0; i<A; i++) {
+    document.write('<tr >')
+    for (j=0; j<B; j++) {
+        document.write('<td>'+((i+1)*(j+1))+'</td>');
+    }
+    document.write('</tr>');
+}
+document.write('</table>');
+
+//Задание 3
+document.write('<h3>Найти площадь круга и длину окружности, радиус меняется от а до b </h3>');
+document.write('<table border="1">');
+document.write('<tr >'+'<td>'+'Радиус'+'</td>'+'<td>'+'Площадь круга'+'</td>'+'<td>'+'Длина окружности'+'</td>'+'</tr>');
+
+let lenght,ar;
+   do {
+   ar=3.14*A*A;
+   lenght= 2*3.14*A;
+   document.write('<tr >'+ '<td>'+A.toFixed(1)+'</td>'+ '<td>'+ar.toFixed(3)+'</td>'+ '<td>'+lenght.toFixed(3)+'</td>'+'</tr>');
+    
+    A+=0.3;
+   } while (A <= B);
+document.write('</table>');
+
+
+//Задние 4
+document.write('<h3>Методы toExponential, toFixed, toPrecision, toString </h3>');
+
+let num1=74,num2=127.18668;
+
+document.write('<table border="1">')
+    document.write('<tr >'+'<td>'+'Число'+'</td>'+'<td>'+'Метод'+'</td>'+'<td>'+'Результат'+'</td>'+'<td>'+'Описание'+'</td>'+'</tr>');
+	//названия колонок
+	
+	document.write('<tr >'+'<td>'+(num1)+'</td>'+'<td>'+'toPrecision'+'</td>'+'<td>'+num1.toPrecision()+'</td>'+'<td>'+'Выдает строку с обьектом заданной точности'+'</td>'+'</tr>'+
+    '<tr >'+'<td>'+(num2)+'</td>'+'<td>'+'toPrecision'+'</td>'+'<td>'+num2.toPrecision(6)+'</td>'+'<td>'+'Выдает строку с обьектом заданной точности(тут задана 6 знаков)'+'</td>'+'</tr>');
+	//метод toprecision
+	
+	document.write('<tr >'+'<td>'+(num1)+'</td>'+'<td>'+'toExponential'+'</td>'+'<td>'+num1.toExponential()+'</td>'+'<td>'+'Выдает строку, содержащую число в экспоненциальном виде '+'</td>'+'</tr>'+
+    '<tr >'+'<td>'+(num2)+'</td>'+'<td>'+'toExponential'+'</td>'+'<td>'+num2.toExponential()+'</td>'+'<td>'+'(1 до запятой, остальные после, умножить на e в необходимой степени)'+'</td>'+'</tr>');
+	//метод toExponential
+	
+	document.write('<tr >'+'<td>'+(num1)+'</td>'+'<td>'+'toFixed'+'</td>'+'<td>'+num1.toFixed(8)+'</td>'+'<td>'+'Выдает строку, содержащую число с фиксированной запятой(округляет)  '+'</td>'+'</tr>'+
+    '<tr >'+'<td>'+(num2)+'</td>'+'<td>'+'toFixed'+'</td>'+'<td>'+num2.toFixed(4)+'</td>'+'<td>'+'Если указать точность, то округлит до указанного знака, не двигая запятую(тут указано 4)'+'</td>'+'</tr>');
+	//метод tofixed
+	
+	document.write('<tr >'+'<td>'+(num1)+'</td>'+'<td>'+'toString'+'</td>'+'<td>'+num1.toString(2)+'</td>'+'<td>'+'Возвращает строковое представление числа в указаной системе счисления( тут 2)'+'</td>'+'</tr>'+
+    '<tr >'+'<td>'+(num2)+'</td>'+'<td>'+'toString'+'</td>'+'<td>'+num2.toString(16)+'</td>'+'<td>'+'А тут 16 '+'</td>'+'</tr>');
+	//метод toString	
+ 
+document.write('</table>');
+</script>
+</body>
+</html>

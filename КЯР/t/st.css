@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+body {
+background-image: url(back.jpg);}
+h2 {
+  font-family: monospace;
+  color: white;
+  padding-top: 5px;
+}
+nav {
+  width: 1800px;
+  margin: 0 auto 20px;
+}
+ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.text
+{
+  font-size: x-large;
+  color: white;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.topmenu > li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+a {
+  display: block;
+  padding: 20px 84px;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Lora', serif;
+  transition: .5s linear;
+}
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 10px;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+}
+.three ul {
+  background: #1B1C3B;
+}
+.three ul a {
+  color: white;
+}
+.three .submenu {
+  visibility: hidden;
+  opacity: 0;
+  background: #1B1C3B;
+}
+.three ul li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+.submenu li a {
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  color: white;
+}
+header {
+  width: 100%;
+  background: black;
+  opacity: 1;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  position: relative;
+  color:white;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: black;
+  opacity: 1;
+  color: white;
+}
+.stars{
+  font-size: xx-large;
+  color: #F3F63B;
+  padding-bottom: 360px;
+}
+aside {
+  width: 33%;
+  float: right;
+  padding-right: 460px;
+}

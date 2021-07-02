@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='3.xslt'?>
+<faculty>
+	<specialization>
+		<name> ПОИБМС </name>
+		<period> 4 года </period>
+		<city> Минск БГТУ</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 75 чел </stud>
+		<passball> 308 балла </passball>
+	</specialization>
+	<specialization>
+		<name> ПОМУ </name>
+		<period> 4 года </period>
+		<city> Минск БГУ </city>
+		<exam> математика,физика,русский </exam>
+		<stud> 35 чел </stud>
+		<passball> 316 баллов </passball>
+	</specialization>
+	<specialization>
+		<name> ПОИТ </name>
+		<period> 4 года </period>
+		<city> Минск БГТУ</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 85 чел </stud>
+		<passball> 307 балла </passball>
+	</specialization>
+	<specialization>
+		<name> ПОИС </name>
+		<period> 4 года </period>
+		<city> Москва Политех</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 55 чел </stud>
+		<passball> 45 баллов </passball>
+	</specialization>
+</faculty>

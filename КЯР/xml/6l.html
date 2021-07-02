@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head> 
+    <body> 
+        <svg width="300" height="200">
+            <polyline points="15,10 40,135 65,10 90,135 115,10 140,135, 165,10 190,135, 215,10 240,135, 265,10" stroke="cyan" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            </svg>
+            <svg width="300" height="200">
+            <polyline points="15,10 40,135 65,10 90,135 115,10 140,135, 165,10 190,135, 215,10 240,135, 265,10" stroke="cadetblue" stroke-width="10" stroke-linejoin="bevel" stroke-linecap="square" fill="none"/>
+        </svg>
+
+            <!-- ломанные -->
+
+        <svg width="300" height="200">
+            <g>
+            <polygon points="5,135 115,5 225,135" fill="cyan" fill-opacity="0.7"stroke="none" />
+            <polygon points="5,135 115,5 225,135" fill="cadetblue" fill-opacity="0.7"stroke="none" transform ="rotate(-23 115 70)" />
+            <polygon points="5,135 115,5 225,135" fill="gray" fill-opacity="0.7"stroke="none" transform ="skewX(30)"/>
+            <polygon points="5,135 115,5 225,135" fill="black" fill-opacity="0.7" stroke="none" transform ="scale(0.5)"/>
+            <polygon points="5,135 115,5 225,135" fill="cyan" fill-opacity="0.7" stroke="none" transform ="translate(70 70)"/>
+            </g>
+        </svg>
+
+        <!-- треугольники --><br>
+
+        <svg  width="200" height="200"> 
+            <g >
+            <line x1="10" y1="10" x2="150" y2="130" stroke="violet" stroke-width="20" stroke-linecap="round" />
+            <line x1="10" y1="60" x2="150" y2="180" stroke="purple" stroke-width="20"/>
+            </g>
+        </svg>
+
+        <!-- линии -->
+
+        <svg  width="250" height="250">
+            <g>
+            <rect x="15" y="15" width="150" height="180" rx="20" ry="20" stroke="violet" stroke-width="10" fill="none"/>
+            <rect x="35" y="35" width="110" height="140" rx="20" ry="20" stroke="purple" stroke-width="10" fill="none"/>
+            <rect x="55" y="55" width="70" height="100" rx="20" ry="20" fill="violet"/>
+            </g>
+        </svg>
+
+        <!-- прям --> <br> <br>
+
+        <svg  width="300" height="300"> 
+            <defs>
+            <linearGradient id = "uta">
+                <stop offset = "20%" stop-color = "yellow"/>
+                <stop offset = "80%" stop-color = "orange"/>
+            </linearGradient>
+            </defs>
+            <g >
+            <ellipse rx="110" ry="80" cx="115" cy="100" stroke-width="10" stroke="brown" fill="url(#uta)" />
+            <circle r="10" cx="80" cy="80" fill="brown"/>
+            <circle r="20" cx="50" cy="100" fill="red" fill-opacity="0.5"/>
+            <circle r="10" cx="150" cy="80" fill="brown"/>
+            <circle r="20" cx="180" cy="100" fill="red" fill-opacity="0.5"/>
+            <polyline points="150,110 115,120 80,110 " stroke="brown" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none"/>  
+            </g>
+        </svg>
+
+        <svg  width="300" height="300"> 
+            <g >
+            <rect x="55" y="55" width="150" height="150" fill="red" fill-opacity="0.7" stroke="white" stroke-width="5"/>
+            <rect x="85" y="85" width="150" height="150" fill="orange" fill-opacity="0.5" stroke="white" stroke-width="5"/>
+            <rect x="115" y="115" width="150" height="150" fill="yellow" fill-opacity="0.5" stroke="white" stroke-width="5"/>
+            </g>
+        </svg>
+        <!-- прямоугольнички и птичька -->
+
+        <svg  width="200" height="200">
+          <linearGradient id="linear">
+            <stop offset="0%" stop-color="crimson"/>   
+            <stop offset="50%" stop-color="gold"/>
+            <stop offset="100%" stop-color="teal"/>
+          </linearGradient>
+          <rect fill="url(#linear)"
+                width="100%" height="100%"/>
+        </svg>
+
+        <svg  width="200" height="200">
+            <radialGradient id="radial"
+                cx="50%" y="50%">
+                <stop offset="0%" stop-color="white"/>
+                <stop offset="60%" stop-color="cyan"/>
+                <stop offset="100%" stop-color="teal"/>
+            </radialGradient>
+            <rect fill="url(#radial)"
+                    width="100%" height="100%"/>
+        </svg>
+        <!-- градиенты -->
+    </body>
+</html> 

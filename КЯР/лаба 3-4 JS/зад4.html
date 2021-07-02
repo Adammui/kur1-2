@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<script src="func.js"></script>
+   <style type='text/css'>
+ * { 
+    font-family: Arial, Verdana, sans-serif;
+	color: purple;
+	background-color: black;
+    font-size: 105%; 
+	}
+table td {
+	padding: 5px;
+	border: 1px solid purple;
+	background-color: white;
+	text-align: center;
+	}
+
+ </style>
+</head>
+<body>
+<script type="text/javascript">
+var x = new Date;
+        document.write('<table>');
+ 
+        document.write('<tr><td>Год</td><td>' + x.getFullYear() + '</td>' + '</tr>');
+        document.write('<tr><td>Месяц</td><td>' + (x.getMonth()+1) +'</td>' + '</tr>');
+        document.write('<tr><td>День</td><td>' + x.getDate() + '</td>' + '</tr>');
+        document.write('<tr><td>Час</td><td>' + x.getHours() + '</td>' + '</tr>');
+        document.write('<tr><td>Минуты</td><td>' + x.getMinutes() + '</td>' + '</tr>');
+        document.write('<tr><td>Секунду</td><td>' + x.getSeconds() + '</td>' + '</tr>');
+        document.write('</table>');
+  
+</script>
+</body>
+</html>

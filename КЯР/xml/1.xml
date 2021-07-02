@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faculty [
+<!ELEMENT faculty (specialization,name,period,city,exam,stud,passball)>
+<!ELEMENT specialization (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT period (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT exam (#PCDATA)>
+<!ELEMENT stud (#PCDATA)>
+<!ELEMENT passball (#PCDATA)>
+]>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<faculty orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="schema.xsd">
+	<specialization>Таблица проходных баллов </specialization>
+	<specialization>
+		<name> ПОИБМС </name>
+		<period> 4 года </period>
+		<city> Минск БГТУ</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 75 чел </stud>
+		<passball> 308 балла </passball>
+	</specialization>
+	<specialization>
+		<name> ПОМУ </name>
+		<period> 4 года </period>
+		<city> Минск БГУ </city>
+		<exam> математика,физика,русский </exam>
+		<stud> 35 чел </stud>
+		<passball> 316 баллов </passball>
+	</specialization>
+	<specialization>
+		<name> ПОИТ </name>
+		<period> 4 года </period>
+		<city> Минск БГТУ</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 85 чел </stud>
+		<passball> 307 балла </passball>
+	</specialization>
+	<specialization>
+		<name> ПОИС </name>
+		<period> 4 года </period>
+		<city> Москва Политех</city>
+		<exam> математика,физика,русский </exam>
+		<stud> 55 чел </stud>
+		<passball> 45 баллов </passball>
+	</specialization>
+</faculty>

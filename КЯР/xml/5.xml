@@ -1,0 +1,31 @@
+<input type="file" onchange="processFiles(this.files)">
+<html>
+<body>
+function processFiles(files) 
+{ // После загрузки файла
+	var file = files[0];
+	var reader = new FileReader(); // Читаем файл
+	reader.onload = function (e);
+	{
+
+		xml = e.target.result; // Записываем в переменную содержи-мое файла// Совершаем действия над строкой xml
+	}
+	reader.readAsText(file); // Указываем, что данный файл предназначен для чтения текста
+}
+<script>
+	
+if (window.DOMParser) // Включаем обработчик XML структуры
+{ // Firefox, Chrome, Opera и др.
+	parser=new DOMParser();
+	xmlDOC=parser.parserFromString(xml, "text/xml");
+}
+else //Internet Explorer
+
+{
+	xmlDOC=new ActiveXObject("Microsoft.XMLDOM");
+	xmlDoc.async=false;
+	xmlDoc.loadXML(xml);
+}
+</script>
+</html>
+</body>

@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<script>
+
+	function Gruppa(n,spec,kolich)
+	{ 
+	    //Свойства(номер, специальность, количество)
+	    this.n = n;
+	    this.spec = spec;
+	    this.kolich = kolich;
+
+	    //Метод (добавить в группу k студентов)
+	    this.add_stud = function(k)
+	    {               
+	    	this.kolich= this.kolich + k;
+	        document.write('В группу ' + this.n + ' добавили '+ k + ' студентов.<br>');
+	    }
+	    // метод исключить из группы m cтудентов
+	    this.sub_stud = function(m)
+	    {               
+	        this.kolich-=m;
+	        document.write('В группе ' + this.n + ' минуснули '+ m + ' студентов.<br\>');
+	    } 
+      
+	} 
+
+    function Student(gr,kurs,name,fam,mat,fiz,ded)
+    {
+
+        this.gr = gr;
+	    this.kurs = kurs;
+	    this.name = name;
+	    this.fam = fam;
+	    this.mat = mat;
+	    this.fiz = fiz;
+	    this.ded = ded;
+
+	    this.studd = function(fam)
+	        {
+	        	document.write(this.gr+ "-"+ this.kurs+" "+this.name+" "+this.fam+"<br>");
+	        }
+	    this.ekz = function(fam)
+	        {
+	        	document.write("Экзамены: "+this.mat+ ", "+ this.fiz+", "+this.ded+"<br>");
+	        }
+	    this.sr_ball = function(fam)
+	        {
+	        	let z=(this.mat+ this.fiz + this.ded)/3;
+	        	document.write("Средний балл: "+z+"<br>");
+	        }
+	            
+	    
+    }
+
+	document.write(" Изменения в группах за 1 семестр учебного года <br>");
+	//Теперь можно создавать экземпляры объекта
+	let gr1 = new Gruppa(2, "ИСиТ", 28);
+	let gr2 = new Gruppa(8, "ПОИБМС", 29);
+	let gr3 = new Gruppa(11, "ДЭВИ", 19);
+
+	let st1 = new Student(2, 2, "Валя", "Иванова", 6, 2, 8);
+	let st2 = new Student(8, 1, "Илья","Мишуткин", 2, 3, 3);
+	let st3 = new Student(11, 1, "Коля", "Сидоров", 1, 1, 4);
+	
+	//Вызов метода созданного объекта (добавить, удалить)
+	gr1.add_stud(2);
+	gr1.sub_stud(1);
+	gr2.sub_stud(1);
+	gr3.add_stud(4);
+
+	//C помощью prototype добавим объекту свойство kurs
+    //экземпляры объекта будут иметь это свойство
+    Gruppa.prototype.kurs=this.kurs;
+    gr1.kurs=2;
+    gr2.kurs=1;
+    gr3.kurs=3;
+    document.write(" Список групп : <br>"); 
+	document.write(gr1.n +"-"+ gr1.kurs + " " + gr1.spec + " " + gr1.kolich+ "<br>"+ gr2.n +"-"+ gr2.kurs + " " + gr2.spec + " " + gr2.kolich+ "<br>"+ gr3.n +"-"+ gr3.kurs + " " + gr3.spec + " " + gr3.kolich+ "<br>");
+
+    document.write(" Список студентов, направленных на пересдачу: : <br>"); 
+    st1.studd ("Иванова"); st1.ekz("Иванова"); st1.sr_ball("Иванова");
+    st2.studd ("Мишуткин");  st2.ekz ("Мишуткин"); st2.sr_ball ("Мишуткин");
+    st3.studd ("Сидоров");  st2.ekz ("Сидоров"); st2.sr_ball ("Сидоров");
+
+
+    mass = new Array();
+        mass[0] = 6*Math.pow(3.14, 2) + 3*Math.exp(8);
+        mass[1] = 2*Math.cos(4) + Math.cos(12) + 8*Math.exp(3);
+        mass[2] = 3*Math.sin(9) + Math.log(5) + Math.sqrt(3);
+        mass[3] = 2*Math.tan(5) + 6*3.14 + Math.sqrt(12);
+
+        
+        document.write("<br>Задание 3, массив: "+mass[0].toFixed(0)+" "+ mass[1].toFixed(1)+" "+ mass[2].toFixed(1)+" "+ mass[3].toFixed(1)+"<br>");
+        delete mass[3];
+        document.write("Измененный массив: "+mass[0].toFixed(0)+" "+ mass[1].toFixed(1)+" "+ mass[2].toFixed(1)+"<br>");
+        let mystring = "Астровская Дарья Александровна";
+
+	    document.write('spec' in gr1); // проверить, есть ли свойство spec у объекта gr1;
+        document.write(1 in mass); //проверить, есть ли элемент с номером 1 в массиве mas.
+        //проверяем mass
+        document.write(mass instanceof Array);
+        document.write(mass instanceof String);
+        document.write(mass instanceof Object);
+        //проверяем mystring
+        document.write(mystring instanceof Array);
+        document.write(mystring instanceof String);
+        document.write(mystring instanceof Object);
+        document.write("<br>");
+
+    function five()
+    {
+    	return 5;
+    }
+        document.write("Тип функции 5: "+typeof five()+"<br>");
+        document.write("Тип массива выше: "+typeof mass+"<br>");
+        document.write("Тип пользовательского обьекта Gruppa: "+typeof Gruppa);
+        
+
+
+</script></head>
+<body></body>
+</html>

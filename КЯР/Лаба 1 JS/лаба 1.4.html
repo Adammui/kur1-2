@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Знаки сравнения </title>
+</head>
+<body>
+<script type='text/javascript'> 
+
+x=prompt('Введите число 1:', 'число');
+document.write('Вы ввели число ', x , '    ');
+
+if ( x<20 || x>40 && x!=15 && x%5==0 )
+document.write("Правильно! Оно меньше 20 или больше 40 и не равно 15 и делится без остатка на 5. ");
+
+else
+document.write("Не угадали");
+
+x1=prompt('Введите число 2:', 'число');
+document.write('Вы ввели число ', x1 , '    ');
+
+if ( x1<=0 || x1>-100 && x1%10!=0 )
+document.write("Правильно! Это число отрицательное, больше -100 и не делится на 10 без остатка. ");
+
+else
+document.write("Не угадали");
+
+</script>
+
+</body>
+</html>

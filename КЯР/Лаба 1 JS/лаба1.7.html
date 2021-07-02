@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Try -catch </title>
+</head>
+<body>
+<script type='text/javascript'> 
+
+try {
+  alert('Выполняется код в блоке try');
+  arg; // ошибка, переменная не определена
+  alert('Ошибки в коде нет и он продолжает выполняться до конца'); 
+} 
+
+catch(e) {
+  alert(e);
+}
+alert("Код продолжает выполнение, когда закрывается блок Catch");
+</script>
+
+</body>
+</html>

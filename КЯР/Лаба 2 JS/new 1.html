@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test</title>
+<style type="text/css">
+table { /*Скрипт относительно таблицы*/
+width:100%; /*Ширина таблицы*/
+border-collapse:collapse; /*Убираем двойные линии между ячейками таблицы*/
+background-color:#ffcc33; /*Задает таблице фоновое изображение, если при заданном фоне для всей таблицы, задать фон для ряда или ячейки, тогда этот ряд или ячейка будут иметь фон отличный от всей таблицы*/
+border-width:3px; /*Толщина рамки таблицы в пикселях*/
+border-style:solid; /*Рамка таблицы сплошная*/
+border-color:#000000; /*Цвет рамки таблицы*/
+}
+td { /*Скрипт относительно ячейки таблицы*/
+border:1px solid black; /*Рамка у ячейки таблицы сплошная*/
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var max=18,i,j
+document.write('<table border="1">')
+for (i=0; i<max; i++) {
+    document.write('<tr>')
+    for (j=0; j<max; j++) {
+        document.write('<td>'+(i+1)+'.'+(j+1)+'</td>')
+    }
+    document.write('</tr>')
+}
+document.write('</table>')
+</script>
+</body>
+</html>

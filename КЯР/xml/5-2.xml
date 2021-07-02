@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+<num>Группа ПОИБМС-21 </num>
+	<student>
+		<name> Владимир </name>
+		<surname> Пнпруку </surname>
+		<city> Город </city>
+		<year> 2005 </year>
+		<passball> 57 </passball>
+	</student>
+
+	<student>
+		<name> Гриша </name>
+		<surname> Каенпнр </surname>
+		<city> Минск </city>
+		<year> 2002 </year>
+		<passball> 31  </passball>
+	</student>
+
+	<student>
+		<name> Зоя </name>
+		<surname> Еркп </surname>
+		<city> Столбцы </city>
+		<year> 2000 </year>
+		<passball> 31 </passball>
+	</student>
+	
+	<student>
+		<name> Даша </name>
+		<surname> Ав </surname>
+		<city> Минск </city>
+		<year> 2002 </year>
+		<passball> 319 </passball>
+	</student>
+
+	<student>
+		<name> Даша </name>
+		<surname> Ло </surname>
+		<city> Минск </city>
+		<year> 2001 </year>
+		<passball> 320 </passball>
+	</student>
+
+</group>

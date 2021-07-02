@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+<num>Группа ПОИБМС-20 </num>
+	<student>
+		<name> Инокентий </name>
+		<surname> Hио </surname>
+		<city> Пинск </city>
+		<year> 2001 </year>
+		<passball> 31 </passball>
+	</student>
+
+	<student>
+		<name> Лука </name>
+		<surname> Каенпнр </surname>
+		<city> Минск </city>
+		<year> 2002 </year>
+		<passball> 31  </passball>
+	</student>
+
+	<student>
+		<name> Тамара </name>
+		<surname> Мргц </surname>
+		<city> Гомель </city>
+		<year> 2000 </year>
+		<passball> 31 </passball>
+	</student>
+	
+	<student>
+		<name> Даша </name>
+		<surname> А </surname>
+		<city> Минск </city>
+		<year> 2002 </year>
+		<passball> 319 </passball>
+	</student>
+
+	<student>
+		<name> Даша </name>
+		<surname> Б </surname>
+		<city> Минск </city>
+		<year> 2001 </year>
+		<passball> 320 </passball>
+	</student>
+
+</group>

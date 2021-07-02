@@ -1,0 +1,10 @@
+<!DOCTYPE faculty [
+<!ELEMENT faculty (specialization,name,period,city,exam,stud,passball)>
+<!ELEMENT specialization (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT period (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT exam (#PCDATA)>
+<!ELEMENT stud (#PCDATA)>
+<!ELEMENT passball (#PCDATA)>
+]>

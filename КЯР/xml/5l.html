@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+   <input type="file" onchange="processFiles(this.files)">
+   Загрузите файлы 5-1 или 5-2 из папки xml
+   <script>
+   function processFiles(files) 
+   {
+      var file = files[0];
+      var reader = new FileReader();
+      reader.onload = function (e) 
+      {
+         var xml = e.target.result;
+      if (window.DOMParser) 
+         { // Firefox, Chrome, Opera и др.
+         var parser=new DOMParser();
+         var xmlDoc=parser.parseFromString(xml, "text/xml");
+         }
+      else 
+         { //Internet Explorer
+         xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+         xmlDoc.async= "false";
+         xmlDoc.loadXML(xml);
+         }
+      var Group = xmlDoc.getElementsByTagName("num")[0].innerHTML;
+      document.body.innerHTML += "<br/> <h2>"+ Group+"</h2>";
+       
+      var SList = xmlDoc.getElementsByTagName("student");
+      for (var i=0; i < SList.length; i++) 
+         {
+         var SName = SList[i].getElementsByTagName ("name") [0].innerHTML;
+         var SSurame = SList[i].getElementsByTagName ("surname") [0].innerHTML;
+         var SCity = SList[i].getElementsByTagName ("city") [0].innerHTML;
+         var SBall = SList[i].getElementsByTagName ("passball") [0].innerHTML;
+         var SYear = SList[i].getElementsByTagName ("year") [0].innerHTML;
+         document.body.innerHTML += "<br/> <h3>" + SName +SSurame+ "</h3>"+ "<p>Студент родом из:"+SCity+"<br> Год рождения:"+SYear+"<br> Балл цт при поступлении:"+SBall+"</p>"; 
+         }   
+      }
+      reader.readAsText(file); 
+   }
+
+   </script>
+</body>
+</html>
